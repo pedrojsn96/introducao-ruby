@@ -20,17 +20,7 @@ def binary_multiple_of_4?(string) ## Vê se é um binario valido se for retorna 
     if string =~ /[2-9a-zA-Z]|\s/ || string.empty? || string.length > 8
         puts false
     else
-        num = 0
-        j = 0
-        i = string.length - 1
-        until i == -1
-            if string[i] == "1"
-                num += 2**j
-            end
-            i -= 1
-            j += 1
-        end
-        puts num % 4 == 0 ? true: false
+        puts string.to_i(2).to_i % 4 == 0 ? true: false 
     end
 end
 
