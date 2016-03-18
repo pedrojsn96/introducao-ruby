@@ -13,18 +13,8 @@ def max_2_sum(array) ## retorna a soma de dois maiores elementos do array
     elsif array.length == 1
         return array.first
     else
-        i = 2
-        e1 = array[0]
-        e2 = array[1]
-        until i==(array.length)
-            if e1 > e2
-                array[i] > e2 ? e2=array[i]: false
-            else
-                array[i] > e1 ? e1=array[i]: false
-            end
-            i+=1
-        end
-        return e1+e2
+        array.sort!
+        return array[-1]+array[-2]
     end
 end
 
@@ -51,5 +41,5 @@ end
 
 
 puts sum([1,2,3])
-puts max_2_sum([1,2,3,9])
+puts max_2_sum([9,9,9,9])
 puts sum_to_n?([1,2,3,9],12)
