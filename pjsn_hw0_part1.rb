@@ -4,7 +4,11 @@
 
 
 def sum(array) ## retorna a soma de todos os elementos do array
-    array.inject(0){|sum,x| sum + x}
+    if array.empty?
+        return "zero"
+    else
+        array.inject(0){|sum,x| sum + x}
+    end
 end
 
 def max_2_sum(array) ## retorna a soma de dois maiores elementos do array
