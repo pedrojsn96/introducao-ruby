@@ -9,7 +9,8 @@ end
 
 def starts_with_consonant?(string) ## Vê se a primeira letra da string é consoante
     string.downcase!
-    if string !~ /^([aeiou]|\s|[0-9])/
+    ## Falta fazer para proibir caracteres especiais
+    if string !~ /^[aeiou]/ && string =~ /^[a-z]/ 
         puts true
     else
         puts false
@@ -24,16 +25,20 @@ def binary_multiple_of_4?(string) ## Vê se é um binario valido se for retorna 
     end
 end
 
+puts "Teste 1"
 hello("Pedro")
-puts "***"
+puts "Teste 2"
 starts_with_consonant?("PEDRO")
 starts_with_consonant?("pedro")
 starts_with_consonant?("oi")
 starts_with_consonant?("9cloud")
 starts_with_consonant?(" 1")
-puts "***"
+starts_with_consonant?(".dasda")
+starts_with_consonant?("teste1")
+puts "Teste 3"
 binary_multiple_of_4?("pedro")
-binary_multiple_of_4?("10000")
-binary_multiple_of_4?("11111101")
+binary_multiple_of_4?("101394")
+binary_multiple_of_4?("10000") #valido
+binary_multiple_of_4?("11111101") #valido
 binary_multiple_of_4?(" ")
 binary_multiple_of_4?("000000000000")
