@@ -43,7 +43,15 @@ def sum_to_n?(array,n) ## Retorna true se n for igual a soma de dois elementos d
     end
 end
 
-
+puts "Teste 1"
 puts sum([1,2,3])
-puts max_2_sum([9,9,9,9])
+puts sum([])
+puts "Teste 2"
+puts max_2_sum([])
+puts max_2_sum([2])
+puts max_2_sum([1,9,5,10])
+puts "Teste 3"
 puts sum_to_n?([1,2,3,9],12)
+puts sum_to_n?([],2)
+puts sum_to_n?([1],2)
+puts sum_to_n?([1,2,3,9],20)
